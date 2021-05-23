@@ -9,7 +9,7 @@ public class ConexionDB {
     public Connection abrirConexion(){       
         try{        
            Class.forName("com.mysql.jdbc.Driver");
-           cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/detodo","root","");           
+           cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/detodo","root","@#jDev4321");           
         }catch (ClassNotFoundException ex){
             Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex);
         }catch (SQLException ex){

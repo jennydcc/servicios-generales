@@ -45,7 +45,6 @@ public class Proceso_Validadores{
         }
         return lista;
     }
-    
     private Cliente logcli(String correo, String contrasena){
         Cliente c = null;
         ConexionDB objcn = new ConexionDB();

@@ -1,16 +1,14 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>JSP Page</title>
-  </head>
-  <body>
-    <h1>TODO SERVICIO</h1>
-    <h1><a href="login.jsp">Iniciar Sesion</a></h1><br>
-    <h1>Eres administrador<a href="mainAdmin.jsp">Click aquí</a></h1>
-    <hr>
-  </body>
-</html>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@include file="_header.jsp" %>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h1>Todo lo que necesitas a un solo click</h1>
+      <h5 class="text-black-50">Nuestros profesionales del hogar están disponibles para ustedes en el momento y lugar que desee</h5>
+    </div>
+    <div class="col-12 col-md-6">
+      <img src="images/home.jpg" class="img-fluid" alt="Home image">
+    </div>
+  </div>
+</div>
+<%@include file="_footer.jsp" %>
