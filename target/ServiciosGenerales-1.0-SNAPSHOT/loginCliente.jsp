@@ -8,11 +8,11 @@
       <form method="POST" action="login">
         <div class="mt-4 mb-3">
           <label for="email-input" class="form-label fw-bold fs-11">CORREO ELECTRÓNICO</label>
-          <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+          <input type="email" name="correo" class="form-control" id="email-input" placeholder="name@example.com">
         </div>
         <div class="mb-3">
           <label for="passwd-input" class="form-label fw-bold fs-11">CONTRASEÑA</label>
-          <input type="password" class="form-control" id="passwd-input">
+          <input type="password" name="contra" class="form-control" id="passwd-input">
         </div>
         <button type="submit" class="btn app-btn-login">Ingresar</a>
       </form>

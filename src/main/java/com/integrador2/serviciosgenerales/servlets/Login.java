@@ -4,10 +4,11 @@
  */
 
 package com.integrador2.serviciosgenerales.servlets;
+import com.integrador2.serviciosgenerales.negocio.Proceso_Validadores;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import java.sql.*;
+import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
 /**
  *
@@ -21,10 +22,10 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
+        String correo = request.getParameter("correo");
+        String contra = request.getParameter("contra");
         Proceso_Validadores pv = new Proceso_Validadores();
-        //pv.
+        ArrayList loginOut = pv.Login(correo, contra);
         
 /*         if(Validate.checkUser(email, pass))
         { */
