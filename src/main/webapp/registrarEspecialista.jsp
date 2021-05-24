@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 21 may. 2021, 14:53:08
-    Author     : lhuallpa
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

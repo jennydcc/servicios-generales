@@ -1,7 +1,3 @@
-/*
- * Copyright 2020 Rapifox All Rights Reserved.
- * https://rapifox.com
- */
 
 package com.integrador2.serviciosgenerales.servlets;
 import com.integrador2.serviciosgenerales.negocio.Proceso_Validadores;
@@ -10,10 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
-/**
- *
- * @author Jaime
- */
+
 @WebServlet(name="Login", urlPatterns={"/login"})
 public class Login extends HttpServlet {
  
