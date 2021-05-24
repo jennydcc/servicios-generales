@@ -27,17 +27,9 @@ public class Login extends HttpServlet {
         Proceso_Validadores pv = new Proceso_Validadores();
         ArrayList loginOut = pv.Login(correo, contra);
         
-/*         if(Validate.checkUser(email, pass))
-        { */
-            RequestDispatcher rs = request.getRequestDispatcher("mainCliente.jsp");
-            rs.forward(request, response);
-/*         }
-        else
-        {
-           out.println("Username or Password incorrect");
-           RequestDispatcher rs = request.getRequestDispatcher("index.html");
-           rs.include(request, response);
-        } */
+        RequestDispatcher rs = request.getRequestDispatcher("mainCliente.jsp");
+        rs.forward(request, response);
+
     }
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.

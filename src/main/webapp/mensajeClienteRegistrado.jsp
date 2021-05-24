@@ -3,11 +3,11 @@
 <div class="container mt-5">
   <div class="row" >
     <div class="col-12 col-md-8">
-      <h3>Back Office Especialista</h3>
-      <h6 class="text-black-50">Bienvenido Especialista</h6>
+      <h3>Mensaje</h3>
+      <h6 class="text-black-50">Cliente Registrado correctamente</h6>
     </div>
-    <div class="col-12 col-md-4">
-      <img src="images/login-especialistas.jpg" class="img-fluid w-100" alt="Login clientes">
+    <div>
+      <a href="loginCliente.jsp" class="btn app-btn app-bg-primary text-white">Iniciar sesión</a>
     </div>
   </div>
 </div>
