@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.integrador2.serviciosgenerales.negocio;
 
 import com.integrador2.serviciosgenerales.datos.ConexionDB;
@@ -151,7 +147,7 @@ public class Proceso_Validadores{
         return fechaTexto; // Devuelve el objeto Date con los nuevos días añadidos
         
     }
-  
+    
     
 }
 
