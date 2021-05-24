@@ -5,8 +5,11 @@
  */
 package com.integrador2.serviciosgenerales.servlets;
 
+import com.integrador2.serviciosgenerales.entidad.Cliente;
+import com.integrador2.serviciosgenerales.negocio.Proceso_Cliente;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.UUID;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Jaime
  */
 @WebServlet(name = "Cliente", urlPatterns = {"/cliente"})
-public class Cliente extends HttpServlet {
+public class ClienteController extends HttpServlet {
 
   /**
    * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -73,10 +76,53 @@ public class Cliente extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
-    String nombre = request.getParameter("correo");
-    String apellido = request.getParameter("apellido");
-    // Continuar
-    RequestDispatcher rs = request.getRequestDispatcher("mensajeClienteRegistrado.jsp");
+    // Campos
+    UUID id = UUID.randomUUID();
+    String nombre = request.getParameter("nombre");
+    String apellidopaterno = request.getParameter("apellidopaterno");
+    String apellidomaterno = request.getParameter("apellidomaterno");
+    String tipodocumento = request.getParameter("tipodocumento");
+    String numerodocumento = request.getParameter("numerodocumento");
+    String correo = request.getParameter("correo");
+    String sexo = request.getParameter("sexo");
+    String fechanacimiento = "1990-01-01";
+    String direccion = request.getParameter("direccion");
+    String departamento = "LIMA";
+    String provincia = "LIMA";
+    String distrito = request.getParameter("distrito");
+    String celular = "999888777";
+    String contrasena = request.getParameter("contrasena");
+    String estado = "ACTIVO";
+    String idUSUARIO = "2";
+
+    //  Objeto cliente
+    Cliente cliente = new Cliente();
+    cliente.setIdCliente(id.toString());
+    cliente.setNombreCliente(nombre);
+    cliente.setApellidopaternoCliente(apellidopaterno);
+    cliente.setApellidomaternoCliente(apellidomaterno);
+    cliente.setTipodocumentoCliente(tipodocumento);
+    cliente.setNumerodocumentoCliente(Integer.parseInt(numerodocumento));
+    cliente.setCorreoCliente(correo);
+    cliente.setSexoCliente(sexo);
+    cliente.setFechanacimientoCliente(fechanacimiento);
+    cliente.setDireccionCliente(direccion);
+    cliente.setDepartamentoCliente(departamento);
+    cliente.setProvinciaCliente(provincia);
+    cliente.setDistritoCliente(distrito);
+    cliente.setCelularCliente(Integer.parseInt(celular));
+    cliente.setContrasenaCliente(contrasena);
+    cliente.setEstadoCliente(estado);
+    cliente.setIdUsuario(idUSUARIO);
+
+    Proceso_Cliente proceso = new Proceso_Cliente();
+    Boolean result = proceso.registrar(cliente);
+    RequestDispatcher rs = null;
+    if (result) {
+      rs = request.getRequestDispatcher("mensajeClienteRegistrado.jsp");
+    } else {
+      rs = request.getRequestDispatcher("loginCliente.jsp");
+    }
     rs.forward(request, response);
   }
 
