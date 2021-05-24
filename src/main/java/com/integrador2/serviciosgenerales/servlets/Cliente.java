@@ -73,6 +73,9 @@ public class Cliente extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
+    String nombre = request.getParameter("correo");
+    String apellido = request.getParameter("apellido");
+    // Continuar
     RequestDispatcher rs = request.getRequestDispatcher("mensajeClienteRegistrado.jsp");
     rs.forward(request, response);
   }
